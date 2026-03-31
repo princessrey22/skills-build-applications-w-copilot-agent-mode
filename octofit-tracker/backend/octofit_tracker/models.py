@@ -1,5 +1,5 @@
  # pyright: ignore[reportMissingImports]
-from djongo import models
+from django import models
 
 # User model
 class User(models.Model):
