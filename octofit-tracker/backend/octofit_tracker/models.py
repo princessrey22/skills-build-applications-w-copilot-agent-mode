@@ -1,3 +1,4 @@
+ # pyright: ignore[reportMissingImports]
 from djongo import models
 
 # User model
