@@ -1,5 +1,5 @@
- # pyright: ignore[reportMissingImports]
-from django import models
+# pyright: ignore[reportMissingImports]
+from django.db import models
 
 # User model
 class User(models.Model):
@@ -16,7 +16,7 @@ class User(models.Model):
 # Team model
 class Team(models.Model):
     name = models.CharField(max_length=100, unique=True)
-    members = models.ArrayReferenceField(to=User, on_delete=models.CASCADE)
+    members = models.ManyToManyField(User)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
